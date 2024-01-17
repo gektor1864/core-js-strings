@@ -19,11 +19,10 @@
  *   getStringLength(null) => 0
  *   getStringLength(undefined) => 0
  */
-function getStringLength() {
-  fff
 
-};
-
+function getStringLength(value) {
+  return Boolean(value) === false ? 0 : value.length;
+}
 
 /**
  * Returns true if the value is a string, otherwise returns false.
