@@ -147,8 +147,15 @@ function repeatString(str, times) {
  *   removeFirstOccurrences('I like legends', 'end') => 'I like legs'.
  *   removeFirstOccurrences('ABABAB', 'BA') => 'ABAB'.
  */
-function removeFirstOccurrences(/* str, value */) {
-  throw new Error('Not implemented');
+function removeFirstOccurrences(str, value) {
+  const indexOfSub = str.indexOf(value);
+  if (str === '') {
+    return '';
+  }
+  if (indexOfSub > -1) {
+    return str.slice(0, indexOfSub) + str.slice(indexOfSub + value.length);
+  }
+  return str;
 }
 
 /**
@@ -163,8 +170,16 @@ function removeFirstOccurrences(/* str, value */) {
  *   removeLastOccurrences('I like legends', 'end') => 'I like legs'.
  *   removeLastOccurrences('ABABAB', 'BA') => 'ABAB'.
  */
-function removeLastOccurrences(/* str, value */) {
-  throw new Error('Not implemented');
+
+function removeLastOccurrences(str1, value2) {
+  const indexOfSub = str1.lastIndexOf(value2);
+  if (str1 === '') {
+    return '';
+  }
+  if (indexOfSub > -1) {
+    return str1.slice(0, indexOfSub) + str1.slice(indexOfSub + value2.length);
+  }
+  return str1;
 }
 
 /**
@@ -179,9 +194,11 @@ function removeLastOccurrences(/* str, value */) {
  *   sumOfCodes('') => 0
  *   sumOfCodes() => 0
  */
-function sumOfCodes(/* str */) {
-  throw new Error('Not implemented');
+
+function sumOfCodes(str) {
+
 }
+
 
 /**
  * Checks if a string starts with a specific substring.
@@ -244,6 +261,7 @@ function reverseString(/* str */) {
   throw new Error('Not implemented');
 }
 
+/*
 /**
  * Returns a string with characters in alphabetical order.
  *
@@ -255,6 +273,7 @@ function reverseString(/* str */) {
  *   orderAlphabetically('textbook') => 'bekoottx'
  *   orderAlphabetically('abc123xyz') => '123abcxyz'
  */
+
 function orderAlphabetically(/* str */) {
   throw new Error('Not implemented');
 }
@@ -271,6 +290,7 @@ function orderAlphabetically(/* str */) {
  *   containsSubstring('JavaScript is Fun', 'Python') => false
  *   containsSubstring('12345', '34') => true
  */
+
 function containsSubstring(/* str, substring */) {
   throw new Error('Not implemented');
 }
